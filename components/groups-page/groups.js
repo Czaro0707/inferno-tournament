@@ -34,11 +34,9 @@ const Groups = () => {
       <div className={classes.groups}>
         {groupsAfterFetch.map((group, index) => (
           <div key={index} className={classes.group}>
-            <h1>{group.name}</h1>
             <div className={classes.header}>
               <div className={classes.left}>
-                <div>#</div>
-                <div>Nazwa</div>
+                <div>{group.name}</div>
               </div>
 
               <div className={classes.right}>

@@ -5,9 +5,10 @@
   width: 80%;
   max-width: 500px;
   margin-bottom: 30px;
-  padding: 10px 20px;
+  padding: 20px 15px;
   min-width: 275px;
-  border: 3px dotted rgb(209, 138, 8);
+  border: 2px solid rgb(227, 129, 30);
+  /* border-radius: 10px; */
 }
 
 .match h1 {
@@ -25,7 +26,7 @@
 }
 
 .content h2 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   /* flex-basis: 30%; */
 }
 
@@ -38,21 +39,22 @@
 }
 
 @media (min-width: 345px) {
-  .match {
-    padding: 15px 25px;
-  }
-
   .match h1 {
-    font-size: 2.3rem;
+    font-size: 2.5rem;
   }
 
   .content h2 {
-    font-size: 1.3rem;
-    /* flex-basis: 30%; */
+    font-size: 1.5rem;
   }
 
   .content p {
     font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 375px) {
+  .content h2 {
+    font-size: 1.6rem;
   }
 }
 
@@ -66,7 +68,7 @@
   }
 
   .content h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     /* flex-basis: 30%; */
   }
 

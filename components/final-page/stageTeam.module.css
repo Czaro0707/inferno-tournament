@@ -6,9 +6,9 @@
   width: 80%;
   max-width: 500px;
   margin-bottom: 30px;
-  padding: 20px 30px;
+  padding: 20px 15px;
   min-width: 270px;
-  border: 3px dotted rgb(209, 138, 8);
+  border: 2px solid rgb(227, 129, 30);
 }
 
 .match h1 {
@@ -25,12 +25,12 @@
 }
 
 .content h2 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   /* flex-basis: 30%; */
 }
 
 .content p {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 .content span {
@@ -39,22 +39,22 @@
 
 @media (min-width: 360px) {
   .content h2 {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
     /* flex-basis: 30%; */
   }
 
   .content p {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
 }
 
 @media (min-width: 550px) {
   .content h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     /* flex-basis: 30%; */
   }
 
   .content p {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
 }
