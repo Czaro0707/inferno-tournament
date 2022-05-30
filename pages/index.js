@@ -5,7 +5,7 @@ export default function HomePage({ matches }) {
 }
 
 export async function getServerSideProps() {
-  const responseMatches = await fetch("http://localhost:3000/api/matches", {
+  const responseMatches = await fetch("/api/matches", {
     method: "get",
     headers: { "Content-Type": "application/json" },
   });

@@ -63,10 +63,6 @@ export default async function handler(req, res) {
       await client.connect();
       let db = client.db("tournament");
 
-      // const data = await db.collection("groups").find().toArray();
-
-      // let groupsCollection = data[0].groups;
-
       groups.forEach((group) => {
         group.teams.forEach((team) => {
           team.wins = 0;

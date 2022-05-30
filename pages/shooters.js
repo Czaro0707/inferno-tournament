@@ -5,7 +5,7 @@ export default function ShootersPage({ shooters }) {
 }
 
 export async function getServerSideProps() {
-  const responseShooters = await fetch("http://localhost:3000/api/shooters", {
+  const responseShooters = await fetch("/api/shooters", {
     method: "get",
     headers: { "Content-Type": "application/json" },
   });

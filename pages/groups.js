@@ -5,12 +5,12 @@ export default function GroupsPage({ matches, groups }) {
 }
 
 export async function getServerSideProps() {
-  const responseMatches = await fetch("http://localhost:3000/api/matches", {
+  const responseMatches = await fetch("/api/matches", {
     method: "get",
     headers: { "Content-Type": "application/json" },
   });
 
-  const responseGroups = await fetch("http://localhost:3000/api/groups", {
+  const responseGroups = await fetch("/api/groups", {
     method: "get",
     headers: { "Content-Type": "application/json" },
   });
