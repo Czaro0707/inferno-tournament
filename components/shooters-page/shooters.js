@@ -1,14 +1,35 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Shooter from "./shooter";
 
 import classes from "./shooters.module.css";
 
 import Head from "next/head";
 
-const Shooters = ({ shooters }) => {
+const Shooters = () => {
+  const [shooters, setShooters] = useState([]);
+
+  const selectHandler = (e) => {
+    setStage(e.target.value);
+  };
+
+  useEffect(() => {
+    fetch(`/api/shooters`, {
+      method: "get",
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setShooters(data);
+      });
+  }, []);
+
   const sortShooters = () => {
     shooters.sort((a, b) => b.goals - a.goals);
   };
+
+  console.log("zmiana");
 
   sortShooters();
   return (
