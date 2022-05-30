@@ -62,7 +62,7 @@ export default async function handler(req, res) {
 
       const dataMatches = await db.collection("matches").find().toArray();
       const dataGroups = await db.collection("groups").find().toArray();
-      const matches = dataMatches[0].matches;
+      const matches = dataMatches[0].matches.groups;
       const groups = dataGroups[0].groups;
 
       groups.forEach((group) => {

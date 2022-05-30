@@ -9,7 +9,7 @@ const Groups = () => {
   const [groupsAfterFetch, setGroupsAfterFetch] = useState();
 
   useEffect(() => {
-    fetch("/api/groups", {
+    fetch("http://localhost:3000/api/groups", {
       method: "post",
       headers: { "Content-Type": "application/json" },
     })
