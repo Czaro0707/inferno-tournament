@@ -8,10 +8,6 @@ import Head from "next/head";
 const Shooters = () => {
   const [shooters, setShooters] = useState([]);
 
-  const selectHandler = (e) => {
-    setStage(e.target.value);
-  };
-
   useEffect(() => {
     fetch(`/api/shooters`, {
       method: "get",
@@ -28,8 +24,6 @@ const Shooters = () => {
   const sortShooters = () => {
     shooters.sort((a, b) => b.goals - a.goals);
   };
-
-  console.log("zmiana");
 
   sortShooters();
   return (

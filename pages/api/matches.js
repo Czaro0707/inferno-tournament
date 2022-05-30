@@ -8,7 +8,6 @@ export default async function handler(req, res) {
   let db = client.db("tournament");
 
   const data = await db.collection("matches").find().toArray();
-
   const matches = data[0].matches;
 
   return res.status(200).json(matches.groups);

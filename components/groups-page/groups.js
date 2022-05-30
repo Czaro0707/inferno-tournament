@@ -5,14 +5,13 @@ import { useEffect, useState } from "react";
 
 import Head from "next/head";
 
-const Groups = ({ matches, groups }) => {
+const Groups = () => {
   const [groupsAfterFetch, setGroupsAfterFetch] = useState();
 
   useEffect(() => {
     fetch("/api/groups", {
       method: "post",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ matches, groups }),
     })
       .then((response) => {
         return response.json();

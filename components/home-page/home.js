@@ -1,12 +1,25 @@
 import classes from "./home.module.css";
 import Match from "./match";
 
+import { useEffect, useState } from "react";
+
 import Head from "next/head";
 
-const Home = ({ matches }) => {
-  if (matches === undefined) {
-    return <p>Ładuję mecze</p>;
-  }
+const Home = () => {
+  const [matches, setMatches] = useState([]);
+
+  useEffect(() => {
+    fetch(`/api/matches`, {
+      method: "get",
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setMatches(data);
+      });
+  }, []);
 
   return (
     <>

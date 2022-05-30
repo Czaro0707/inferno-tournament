@@ -34,7 +34,7 @@ export default async function handler(req, res) {
 
       const data = await db.collection("groups").find().toArray();
 
-      let groups = data[0].groups;
+      const groups = data[0].groups;
 
       groups.map((group) => {
         group.teams.map((team) => {
@@ -56,12 +56,14 @@ export default async function handler(req, res) {
       return res.status(200).json(teams);
     } else {
       const MongoClient = require("mongodb").MongoClient;
-      const groups = req.body.groups;
-      const matches = req.body.matches;
-
       let client = new MongoClient(URI);
       await client.connect();
       let db = client.db("tournament");
+
+      const dataMatches = await db.collection("matches").find().toArray();
+      const dataGroups = await db.collection("groups").find().toArray();
+      const matches = dataMatches[0].matches;
+      const groups = dataGroups[0].groups;
 
       groups.forEach((group) => {
         group.teams.forEach((team) => {
