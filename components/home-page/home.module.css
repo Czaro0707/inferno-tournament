@@ -1,0 +1,15 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100px;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.home h1 {
+  font-size: 3rem;
+  margin-bottom: 40px;
+}

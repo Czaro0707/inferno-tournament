@@ -1,0 +1,29 @@
+.finalPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 70px auto 0;
+}
+
+.finalPage h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.finalPage label {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.finalPage select {
+  padding: 10px;
+  font-size: 1.5rem;
+}
+
+.matches {
+  width: 100%;
+  max-width: 550px;
+  margin: 50px;
+}

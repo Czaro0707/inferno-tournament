@@ -1,0 +1,31 @@
+.group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.title,
+.content {
+  display: flex;
+}
+
+.title {
+  flex-basis: 35%;
+}
+
+.content {
+  justify-content: space-between;
+  flex-basis: 60%;
+}
+
+.title div:nth-child(1) {
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.content > div {
+  display: flex;
+  width: 15%;
+  justify-content: center;
+}

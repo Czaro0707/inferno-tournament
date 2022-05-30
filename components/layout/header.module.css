@@ -1,0 +1,32 @@
+.wrapper {
+  background-color: #1479d1;
+  width: 100vw;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 15px;
+  color: #fbfef9;
+  max-width: 1200px;
+  /* min-width: 350px; */
+  margin: 0 auto;
+}
+
+.header > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-basis: 20%;
+  cursor: pointer;
+}
+
+@media (min-width: 440px) {
+  .header {
+    height: 90px;
+    padding: 0 25px;
+  }
+}

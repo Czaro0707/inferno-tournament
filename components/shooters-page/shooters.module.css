@@ -1,0 +1,14 @@
+.shooters {
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.h1 {
+  margin-top: 40px;
+  font-size: 3.5rem;
+  text-align: center;
+}
