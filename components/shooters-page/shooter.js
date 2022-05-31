@@ -17,7 +17,6 @@ const Shooter = ({ shooter, place }) => {
         )}
       </div>
       <div>{shooter.name}</div>
-      {/* <div>{shooter.club}</div> */}
       <div>{shooter.goals}</div>
     </div>
   );

@@ -8,14 +8,13 @@
   padding: 20px 15px;
   min-width: 275px;
   border: 2px solid rgb(227, 129, 30);
-  /* border-radius: 10px; */
 }
 
 .match h1 {
   text-align: center;
   flex-basis: 100%;
   margin-bottom: 20px;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .content {
@@ -26,8 +25,7 @@
 }
 
 .content h2 {
-  font-size: 1.3rem;
-  /* flex-basis: 30%; */
+  font-size: 1.4rem;
 }
 
 .content p {
@@ -69,7 +67,6 @@
 
   .content h2 {
     font-size: 1.8rem;
-    /* flex-basis: 30%; */
   }
 
   .content p {
@@ -84,7 +81,6 @@
 
   .content h2 {
     font-size: 2rem;
-    /* flex-basis: 30%; */
   }
 
   .content p {

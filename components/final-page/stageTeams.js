@@ -4,6 +4,7 @@ const StageTeams = ({ teams }) => {
   return (
     <>
       <div className={classes.match}>
+        <div className={classes.time}>{teams.time}</div>
         <div className={classes.content}>
           <h2>{teams.nameA}</h2>
 
