@@ -23,8 +23,17 @@ const Groups = () => {
 
   if (!groupsAfterFetch) {
     return (
-      <div className="spinner-border text-dark" role="status">
-        <span className="visually-hidden">Loading...</span>
+      <div
+        style={{ height: "70vh" }}
+        className="d-flex justify-content-center align-items-center"
+      >
+        <div
+          className="spinner-border text-dark"
+          style={{ width: "5rem", height: "5rem" }}
+          role="status"
+        >
+          <span className="visually-hidden">Loading...</span>
+        </div>
       </div>
     );
   }

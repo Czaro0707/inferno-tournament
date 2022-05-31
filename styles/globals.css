@@ -36,10 +36,10 @@ a {
   color: red;
 }
 
-.spinner-border {
+/* .spinner-border {
   position: absolute;
   top: calc(50vh - 2.5rem);
   left: calc(50vw - 2.5rem);
   width: 5rem;
   height: 5rem;
-}
+} */
