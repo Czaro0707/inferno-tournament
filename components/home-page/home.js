@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import Head from "next/head";
 
 const Home = () => {
-  const [matches, setMatches] = useState([]);
+  const [matches, setMatches] = useState();
 
   useEffect(() => {
     fetch(`/api/matches`, {
@@ -20,6 +20,14 @@ const Home = () => {
         setMatches(data);
       });
   }, []);
+
+  if (!matches) {
+    return (
+      <div className="spinner-border text-dark" role="status">
+        <span className="visually-hidden">Loading...</span>
+      </div>
+    );
+  }
 
   return (
     <>

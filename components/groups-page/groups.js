@@ -22,7 +22,11 @@ const Groups = () => {
   }, []);
 
   if (!groupsAfterFetch) {
-    return <p>...Ładowanie danych</p>;
+    return (
+      <div className="spinner-border text-dark" role="status">
+        <span className="visually-hidden">Loading...</span>
+      </div>
+    );
   }
 
   return (
@@ -31,6 +35,7 @@ const Groups = () => {
         <title>Grupy</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
+
       <div className={classes.groups}>
         {groupsAfterFetch.map((group, index) => (
           <div key={index} className={classes.group}>

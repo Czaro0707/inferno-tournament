@@ -8,7 +8,7 @@ import Head from "next/head";
 
 const Final = () => {
   const [stage, setStage] = useState("semiFinalMatches");
-  const [stageTeams, setStageTeams] = useState([]);
+  const [stageTeams, setStageTeams] = useState();
 
   const selectHandler = (e) => {
     setStage(e.target.value);
@@ -26,6 +26,14 @@ const Final = () => {
         setStageTeams(data);
       });
   }, [stage]);
+
+  if (!stageTeams) {
+    return (
+      <div className="spinner-border text-dark" role="status">
+        <span className="visually-hidden">Loading...</span>
+      </div>
+    );
+  }
 
   return (
     <>

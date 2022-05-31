@@ -11,10 +11,6 @@
   font-weight: 600;
 }
 
-/* .shooter div:nth-child(1) {
-  flex-basis: 10%;
-} */
-
 .shooter div:nth-child(1) {
   flex-basis: 20%;
 }

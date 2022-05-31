@@ -6,7 +6,7 @@ import classes from "./shooters.module.css";
 import Head from "next/head";
 
 const Shooters = () => {
-  const [shooters, setShooters] = useState([]);
+  const [shooters, setShooters] = useState();
 
   useEffect(() => {
     fetch(`/api/shooters`, {
@@ -25,7 +25,16 @@ const Shooters = () => {
     shooters.sort((a, b) => b.goals - a.goals);
   };
 
-  sortShooters();
+  if (!shooters) {
+    return (
+      <div className="spinner-border text-dark" role="status">
+        <span className="visually-hidden">Loading...</span>
+      </div>
+    );
+  } else {
+    sortShooters();
+  }
+
   return (
     <>
       <Head>
