@@ -35,7 +35,7 @@ const Header = () => {
           </div>
         </Link>
 
-        <Link href="/final">
+        {/* <Link href="/final">
           <div className={router.pathname == "/final" ? `active` : ""}>
             <a>
               <Image
@@ -46,7 +46,7 @@ const Header = () => {
               ></Image>
             </a>
           </div>
-        </Link>
+        </Link> */}
 
         <Link href="/shooters">
           <div className={router.pathname == "/shooters" ? `active` : ""}>
